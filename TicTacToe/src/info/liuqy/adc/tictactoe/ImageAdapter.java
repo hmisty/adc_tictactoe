@@ -28,9 +28,8 @@ public class ImageAdapter extends BaseAdapter {
 	 */
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+        return imgIds.length;
+    }
 
 	/* (non-Javadoc)
 	 * @see android.widget.Adapter#getItem(int)
