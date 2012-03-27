@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.GridView;
+import android.widget.ImageView;
 
 /**
  * @author Evan Liu (qingyan123@gmail.com)
@@ -54,8 +56,17 @@ public class ImageAdapter extends BaseAdapter {
 	 */
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		// TODO Auto-generated method stub
-		return null;
+        ImageView imgView;
+        if (convertView == null) {
+            imgView = new ImageView(ctx);
+            imgView.setLayoutParams(new GridView.LayoutParams(85, 85));
+            imgView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            imgView.setPadding(8, 8, 8, 8);
+        } else {
+            imgView = (ImageView) convertView;
+        }
+        imgView.setImageResource(imgIds[position]);
+        return imgView;
 	}
 
 }
