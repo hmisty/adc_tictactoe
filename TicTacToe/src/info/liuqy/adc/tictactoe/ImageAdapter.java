@@ -1,5 +1,6 @@
 package info.liuqy.adc.tictactoe;
 
+import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -10,6 +11,18 @@ import android.widget.BaseAdapter;
  */
 public class ImageAdapter extends BaseAdapter {
 
+	private Context ctx;
+    
+    private Integer[] imgIds = {
+            R.drawable.blank, R.drawable.blank, R.drawable.blank,
+            R.drawable.blank, R.drawable.blank, R.drawable.blank,
+            R.drawable.blank, R.drawable.blank, R.drawable.blank           
+    };
+
+    public ImageAdapter(Context ctx) {
+        this.ctx = ctx;
+    }
+    
 	/* (non-Javadoc)
 	 * @see android.widget.Adapter#getCount()
 	 */
