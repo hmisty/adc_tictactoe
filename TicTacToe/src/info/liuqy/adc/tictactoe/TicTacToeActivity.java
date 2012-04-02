@@ -16,6 +16,8 @@ public class TicTacToeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
+        //restore the state
+        
         GridView grid = (GridView) this.findViewById(R.id.gridview);
         grid.setAdapter(new ImageAdapter(this));
         grid.setOnItemClickListener(new OnItemClickListener() {
@@ -27,4 +29,11 @@ public class TicTacToeActivity extends Activity {
         });
 
     }
+    
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		// TODO Auto-generated method stub
+		super.onSaveInstanceState(outState);
+		//save the state
+	}
 }
